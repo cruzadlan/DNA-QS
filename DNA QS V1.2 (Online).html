@@ -58,15 +58,15 @@
         }
         .input-field { 
             @apply mt-1 block w-full px-3 py-2 bg-white border border-input-border-color rounded-md shadow-sm 
-                   focus:outline-none focus:ring-2 focus:ring-primary-color focus:border-primary-color 
-                   sm:text-sm transition-shadow duration-150; 
+                    focus:outline-none focus:ring-2 focus:ring-primary-color focus:border-primary-color 
+                    sm:text-sm transition-shadow duration-150; 
         }
         .label-text { @apply block text-sm font-medium var(--text-primary); }
         
         .btn { 
             @apply px-4 py-2 rounded-lg font-semibold text-white shadow-md 
-                   focus:outline-none focus:ring-2 focus:ring-offset-2 
-                   flex items-center justify-center transition-all duration-200 ease-in-out transform hover:scale-105; 
+                    focus:outline-none focus:ring-2 focus:ring-offset-2 
+                    flex items-center justify-center transition-all duration-200 ease-in-out transform hover:scale-105; 
         }
         .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
         .btn-primary:hover { background-color: var(--primary-hover-color); }
@@ -99,19 +99,19 @@
         
         .modal { 
             @apply fixed inset-0 bg-black bg-opacity-60 overflow-y-auto h-full w-full 
-                   flex justify-center items-center z-50 opacity-0 transition-opacity duration-300 ease-out;
+                    flex justify-center items-center z-50 opacity-0 transition-opacity duration-300 ease-out;
         }
         .modal.open { @apply opacity-100; }
         .modal-content { 
             @apply bg-white p-6 sm:p-8 rounded-xl shadow-2xl w-11/12 md:w-2/3 lg:w-1/2 
-                   max-h-[85vh] flex flex-col transform scale-95 transition-transform duration-300 ease-out;
+                    max-h-[85vh] flex flex-col transform scale-95 transition-transform duration-300 ease-out;
         }
         .modal.open .modal-content { @apply scale-100; }
         .modal-body { @apply overflow-y-auto whitespace-pre-wrap text-gray-700; }
         
         .tab-button { 
             @apply px-4 py-3 font-medium text-sm leading-5 rounded-t-lg 
-                   focus:outline-none border-b-2 border-transparent transition-all duration-200; 
+                    focus:outline-none border-b-2 border-transparent transition-all duration-200; 
         }
         .tab-button.active { 
             @apply text-primary-color border-primary-color font-semibold; 
@@ -128,7 +128,7 @@
         .header-logo { max-height: 45px; margin-right: 1rem; } /* Slightly smaller logo */
         .doc-no-input { 
             @apply p-1 border border-gray-300 rounded-md text-xs 
-                   focus:ring-1 focus:ring-primary-color focus:border-primary-color transition-shadow duration-150; 
+                    focus:ring-1 focus:ring-primary-color focus:border-primary-color transition-shadow duration-150; 
         }
         #loadingOverlay p { font-size: 1.1rem; }
     </style>
@@ -239,7 +239,7 @@
                 </form>
             </section>
             <section id="savedTabulationSection">
-                 <h2 class="text-2xl font-semibold mb-5 flex items-center" style="color: var(--text-primary);">
+                <h2 class="text-2xl font-semibold mb-5 flex items-center" style="color: var(--text-primary);">
                     <span id="iconItemDbList" class="section-title-icon"></span>Item Database (Editable)
                 </h2>
                 <div class="overflow-x-auto shadow-lg rounded-lg table-container">
@@ -278,7 +278,7 @@
                         <div><span class="font-medium text-indigo-700">Rate (RM):</span> <span id="takeOffItemRateDisplay" class="text-gray-800">-</span></div>
                         <div class="sm:col-span-3"><span class="font-medium text-indigo-700">Description:</span> <span id="takeOffItemDescriptionDisplay" class="block text-xs text-gray-700 mt-1">-</span></div>
                     </div>
-                     <div class="md:col-span-3 text-right mt-3">
+                    <div class="md:col-span-3 text-right mt-3">
                         <button type="submit" class="btn btn-primary w-full sm:w-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" /></svg>
                             Add to Take-Off List
@@ -288,7 +288,7 @@
             </section>
             <section id="takeOffListSection">
                 <h2 class="text-2xl font-semibold mb-5 flex items-center" style="color: var(--text-primary);">
-                     <span id="iconTakeOffList" class="section-title-icon"></span>Project Take-Off List (Editable Quantity)
+                    <span id="iconTakeOffList" class="section-title-icon"></span>Project Take-Off List (Editable Quantity)
                 </h2>
                 <div class="overflow-x-auto shadow-lg rounded-lg table-container">
                     <table class="min-w-full">
@@ -305,17 +305,17 @@
         </div>
 
         <section class="my-10 flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center border-t border-gray-300 pt-8">
-             <button id="generateScopeSummaryBtn" class="btn btn-warning w-full sm:w-auto">
+            <button id="generateScopeSummaryBtn" class="btn btn-warning w-full sm:w-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 Generate Scope Summary
                 <span id="scopeLoader" class="loader hidden"></span>
             </button>
-             <button id="saveToFileButton" class="btn btn-info w-full sm:w-auto">
+            <button id="saveToFileButton" class="btn btn-info w-full sm:w-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M5.5 16.5A2.503 2.503 0 008 19h4a2.503 2.503 0 002.5-2.5V13h-9v3.5zM16.5 8H13V1.5A2.503 2.503 0 0010.5 0h-1A2.503 2.503 0 007 1.5V8H3.5A2.503 2.503 0 001 10.5v1A2.503 2.503 0 003.5 14H10v4.5a2.503 2.503 0 002.5 2.5h1a2.503 2.503 0 002.5-2.5V14h2.5a2.503 2.503 0 002.5-2.5v-1A2.503 2.503 0 0016.5 8z" opacity=".4"/><path d="M13 8V1.5C13 .673 12.327 0 11.5 0h-1C9.673 0 9 .673 9 1.5V8H3.5C1.57 8 0 9.57 0 11.5v1C0 14.43 1.57 16 3.5 16H9v2.5c0 .827.673 1.5 1.5 1.5h1c.827 0 1.5-.673 1.5-1.5V16h5.5c1.93 0 3.5-1.57 3.5-3.5v-1C20 9.57 18.43 8 16.5 8H13z"/></svg>
                 Save All Data to HTML
             </button>
             <button id="exportTakeOffButton" class="btn btn-secondary w-full sm:w-auto">
-                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03l4.25 4.5a.75.75 0 001.09 0l4.25-4.5a.75.75 0 00-1.09-1.03l-2.955 3.129V2.75z" /><path d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03l4.25 4.5a.75.75 0 001.09 0l4.25-4.5a.75.75 0 00-1.09-1.03l-2.955 3.129V2.75z" /><path d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z" /></svg>
                 Export Take-Off to Excel
             </button>
         </section>
@@ -335,8 +335,32 @@
         </div>
     </div>
 
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDJz-_tWyqZeSQwifD6Fp6GVgQxIKGhUDI",
+        authDomain: "dna-qs-app.firebaseapp.com",
+        projectId: "dna-qs-app",
+        storageBucket: "dna-qs-app.firebasestorage.app",
+        messagingSenderId: "664437674701",
+        appId: "1:664437674701:web:1816bf09352f8b0241cf84",
+        measurementId: "G-3TF7RZVHTX"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
     <script>
         // --- IMPORTANT: For Standalone Use (opening HTML directly in browser) ---
+        // This is the Google AI API Key, different from Firebase API Key
         const USER_PROVIDED_API_KEY = "AIzaSyC_ZKrs8AAk3dYuFj3KcDK5-5JUmMT5iT4"; 
 
         // --- Storage Keys ---
@@ -527,8 +551,8 @@
                 if (storedTakeOffItems) try { takeOffItems = JSON.parse(storedTakeOffItems); } catch (e) { takeOffItems = []; }
                 const storedProjectInfo = localStorage.getItem(PROJECT_INFO_STORAGE_KEY);
                 if (storedProjectInfo) {
-                     try { projectInfo = JSON.parse(storedProjectInfo); } 
-                     catch (e) { projectInfo = { docDate: new Date().toISOString().split('T')[0], docRevision: '0', docNum: '001' }; }
+                    try { projectInfo = JSON.parse(storedProjectInfo); } 
+                    catch (e) { projectInfo = { docDate: new Date().toISOString().split('T')[0], docRevision: '0', docNum: '001' }; }
                 } else { 
                     projectInfo = { 
                         ...projectInfo, 
@@ -633,7 +657,7 @@
         });
         
         function makeCellEditable(cell, item, field, itemArray, tableRenderFunc, isNumeric = false, isRate = false) { 
-             cell.ondblclick = function() { 
+            cell.ondblclick = function() { 
                 if (cell.querySelector('input, select')) return; 
                 const originalValue = item[field]; let inputElement;
                 if (field === 'category') { 
@@ -727,7 +751,7 @@
         
         saveToFileButton.addEventListener('click', function() { 
             if (dbItems.length === 0 && takeOffItems.length === 0 && !Object.values(projectInfo).some(val => val && val.toString().trim() !== '')) {
-                 alert("There is no data to save to a file."); return;
+                alert("There is no data to save to a file."); return;
             }
             const htmlContent = generateHtmlWithData(); const blob = new Blob([htmlContent], { type: 'text/html' });
             const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
@@ -764,7 +788,7 @@
             
             let effectiveApiKey = "";
             if (typeof window.__GOOGLE_API_KEY__ !== 'undefined' && window.__GOOGLE_API_KEY__) { 
-                 effectiveApiKey = window.__GOOGLE_API_KEY__;
+                effectiveApiKey = window.__GOOGLE_API_KEY__;
             } else if (USER_PROVIDED_API_KEY) { 
                 effectiveApiKey = USER_PROVIDED_API_KEY;
             } else { 
@@ -773,7 +797,7 @@
                 if (loaderElement.id === 'descriptionLoader') descriptionInput.value = errorMessage;
                 else if (loaderElement.id === 'avgMarketPriceLoader') avgMarketPriceInput.value = errorMessage;
                 else if (loaderElement.id === 'scopeLoader') {
-                     showModal("API Key Required", errorMessage); 
+                    showModal("API Key Required", errorMessage); 
                 }
                 loaderElement.classList.add('hidden'); 
                 if (buttonElement) buttonElement.disabled = false;
@@ -786,7 +810,7 @@
                     { contents: [{ role: "user", parts: [{ text: prompt }] }] } :
                     { instances: [{ prompt: prompt }], parameters: { "sampleCount": 1 } }; 
 
-                const modelName = isTextGeneration ? "gemini-2.0-flash:generateContent" : "imagen-3.0-generate-002:predict";
+                const modelName = isTextGeneration ? "gemini-1.5-flash-latest:generateContent" : "imagen-3.0-generate-002:predict"; // Updated Gemini model
                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}?key=${effectiveApiKey}`;
                 
                 const response = await fetch(apiUrl, { 
@@ -806,7 +830,7 @@
                         generatedOutput = result.candidates[0].content.parts[0].text.trim(); 
                     }
                 } else { 
-                     if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
+                    if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
                         generatedOutput = `data:image/png;base64,${result.predictions[0].bytesBase64Encoded}`;
                     } else {
                         generatedOutput = "Error: No image data received from Imagen.";
